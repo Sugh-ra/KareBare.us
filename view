@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KareBear</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #52307C;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 300px;
+            height: 600px;
+            background-color: #9174CB;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .bear-head {
+            width: 200px;
+            height: 200px;
+            background-color: #C8A2F8;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bear-ears {
+            position: absolute;
+            top: -20px;
+            width: 60px;
+            height: 60px;
+            background-color: #C8A2F8;
+            border-radius: 50%;
+        }
+
+        .bear-ears.left {
+            left: 20px;
+        }
+
+        .bear-ears.right {
+            right: 20px;
+        }
+
+        .bear-ears::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-color: #FFF;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .bear-eyes {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .bear-eyes div {
+            width: 30px;
+            height: 40px;
+            background-color: #000;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .bear-eyes div::before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-color: #FFF;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 7px;
+        }
+
+        .bear-nose {
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            margin-top: 10px;
+        }
+
+        .bear-mouth {
+            width: 40px;
+            height: 20px;
+            border-bottom: 2px solid #000;
+            border-radius: 0 0 40px 40px;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .bear-mouth::before {
+            content: "";
+            width: 2px;
+            height: 10px;
+            background-color: #000;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .body-circle {
+            width: 160px;
+            height: 160px;
+            background-color: #FFF;
+            border-radius: 50%;
+            margin-top: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .body-circle:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        .circle-text {
+            text-align: center;
+            font-size: 20px;
+            color: #FFF;
+            background-color: #52307C;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .text {
+            margin-top: 20px;
+            color: #000;
+            text-align: center;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bear-head">
+            <div class="bear-ears left"></div>
+            <div class="bear-ears right"></div>
+            <div class="bear-eyes">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="bear-nose"></div>
+            <div class="bear-mouth"></div>
+        </div>
+        <div class="body-circle">
+            <div class="circle-text">Let's Care<br><span style="font-size:12px;">Click to start</span></div>
+        </div>
+        <div class="text">Hey, I'm KareBear<br>your medical companion!</div>
+    </div>
+</body>
+</html>
